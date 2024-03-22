@@ -26,5 +26,9 @@ module.exports = {
         filename: 'bin.js',
         path: path.resolve(__dirname, 'out'),
     },
-    plugins: [new HtmlWebpackPlugin({inject: "body"})],
+    plugins: [new HtmlWebpackPlugin({
+        inject: "body",
+        title: "Labyrinth Solver",
+        template: "static/index.html"
+    })],
 };
