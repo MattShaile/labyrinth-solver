@@ -1,5 +1,6 @@
 import { Grid } from "./grid";
 import { Puzzle } from "./puzzle";
+import { Solver } from "./solver";
 
 const easy: Puzzle = {
     start: [0, 4],
@@ -20,41 +21,7 @@ const hard: Puzzle = {
 };
 
 const grid = new Grid(easy);
+const solver = new Solver();
+const solution = solver.solve(easy);
 
-const path = [
-    [0, 4],
-    [1, 4],
-    [2, 4],
-    [3, 4],
-    [4, 4],
-    [4, 3],
-    [3, 3],
-    [2, 3],
-    [1, 3],
-    [0, 3],
-    [0, 2],
-    [1, 2],
-    [1, 1],
-    [0, 1],
-    [0, 0],
-    [1, 0],
-    [2, 0],
-    [2, 1],
-    [2, 2],
-    [3, 2],
-    [4, 2],
-    [4, 1],
-    [3, 1],
-    [3, 0],
-    [4, 0],
-];
-
-const walls = [
-    [3, 4, 0, 3, 8],
-    [2, 0, 5, 2, 0],
-    [3, 1, 2, 4, 1],
-    [2, 4, 4, 4, 0],
-    [7, 4, 4, 4, 1]
-];
-
-grid.drawSolution(path, walls);
+grid.drawSolution(solution);

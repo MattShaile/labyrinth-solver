@@ -1,0 +1,25 @@
+export enum WALL_NAMES {
+    TOP_RIGHT = 0,
+    BOTTOM_RIGHT = 1,
+    BOTTOM_LEFT = 2,
+    TOP_LEFT = 3,
+    TOP_BOTTOM = 4,
+    LEFT_RIGHT = 5,
+    END_TOP = 6,
+    END_RIGHT = 7,
+    END_LEFT = 8,
+    END_BOTTOM = 9
+}
+
+export const WALL_CONVERSIONS: Map<number, WALL_NAMES> = new Map([
+    [3, WALL_NAMES.TOP_RIGHT],
+    [6, WALL_NAMES.BOTTOM_RIGHT],
+    [12, WALL_NAMES.BOTTOM_LEFT],
+    [9, WALL_NAMES.TOP_LEFT],
+    [5, WALL_NAMES.TOP_BOTTOM],
+    [10, WALL_NAMES.LEFT_RIGHT],
+    [14, WALL_NAMES.END_TOP],
+    [13, WALL_NAMES.END_RIGHT],
+    [7, WALL_NAMES.END_LEFT],
+    [14, WALL_NAMES.END_BOTTOM],
+]);

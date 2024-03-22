@@ -1,4 +1,5 @@
 import { Puzzle } from "./puzzle";
+import { Solution } from "./solution";
 
 export class Grid {
 
@@ -14,9 +15,9 @@ export class Grid {
         window.onresize = () => this.resizeCanvas();
     }
 
-    public drawSolution(path: number[][], walls: number[][]) {
-        this.drawPath(path);
-        this.drawWalls(walls);
+    public drawSolution(solution: Solution) {
+        this.drawPath(solution.path);
+        this.drawWalls(solution.walls);
     }
 
     protected drawPath(path: number[][]) {
@@ -74,7 +75,6 @@ export class Grid {
 
                 if (this.puzzle.start[0] === x - 1 && this.puzzle.start[1] === y - 1) {
                     cell.classList.add("start");
-                    console.log(cell);
                 }
                 if (this.puzzle.end[0] === x - 1 && this.puzzle.end[1] === y - 1) {
                     cell.classList.add("end");
